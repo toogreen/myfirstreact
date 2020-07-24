@@ -2,6 +2,7 @@ body{
 	font-family: Helvetica, Sans-serif;
 	font-size: 20px;
 	margin: 0;
+	background-color: whitesmoke;
 }
 
 ul{
@@ -19,4 +20,21 @@ ul{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+main{
+	background-color: white;
+	padding: 20px;
+}
+
+.checkbox {
+	width: 30%;
+	margin-left: 20px;
+	border-bottom: solid black 1px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+footer{
+	text-align: center;
 }

@@ -3,6 +3,7 @@ import Header from "./Header";
 import Nav from "./Nav";
 import MainContent from "./Main";
 import Footer from "./Footer";
+import TodoItem from "./TodoItem";
 import '../App.css';
 
 function App() {
