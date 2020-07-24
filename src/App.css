@@ -1,0 +1,22 @@
+body{
+	font-family: Helvetica, Sans-serif;
+	font-size: 20px;
+	margin: 0;
+}
+
+ul{
+	list-style-image: url('./green-arrow.svg');
+	width: 40%
+}
+
+.navbar {
+	background-color: #333;
+	height: 100px;
+	color: white;
+	margin-bottom: 15px;
+	text-align: center;
+	font-size: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
