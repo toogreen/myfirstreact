@@ -28,7 +28,7 @@ main{
 	width: 80%;
 	background-color: white;
 	padding: 20px;
-	box-shadow: 5px 10px 18px #888888;
+	box-shadow: 3px 4px 4px #888888;
 
 }
 
@@ -45,7 +45,9 @@ footer{
 }
 
 .joke-item{
-	box-shadow: 5px 10px 18px #888888;
+	box-shadow: 3px 4px 4px #888888;
+	border: 1px solid;
+	margin-bottom: 20px;
 }
 
 
