@@ -27,5 +27,7 @@ const jokesData = [
 		id: 6,
 		question: "Joke 6",
 		answer: "Answer 6"
-	},
+	}
 ]
+
+export default jokesData

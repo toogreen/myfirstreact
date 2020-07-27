@@ -5,7 +5,8 @@ import jokesData from "./jokesData"
 
 function MainContent(){
 
-	const jokeComponents = jokesData.map(joke => <joke key={joke.id} question={joke.question} answer={joke.answer} />)
+	const jokeComponents = jokesData.map(joke => <Joke key={joke.id} question={joke.question} answer={joke.answer} />)
+	//const jokeComponents = "test"
 
 	return (
 		<main>
