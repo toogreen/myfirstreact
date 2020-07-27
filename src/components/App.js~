@@ -1,0 +1,21 @@
+import React from "react";
+import Header from "./Header";
+import Nav from "./Nav";
+import MainContent from "./Main";
+import Footer from "./Footer";
+import TodoItem from "./TodoItem";
+import '../App.css';
+
+function App() {
+	return (
+		<div>
+			<Header />
+			<Nav />
+			<MainContent />
+			<TodoItem />
+		 	<Footer />
+		</div>
+	)
+}
+
+export default App;
