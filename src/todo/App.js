@@ -1,16 +1,18 @@
 import React from "react";
-import TodoItem from "./TodoItem";
-import todosData from "./todosData";
-import "./App.css";
+
+import Header from "../components/Header";
+import MainContent from "./MainContent"
+import Footer from "../components/Footer"
+import "../App.css";
 
 function App(){
 
-	const todos = todosData.map(item => <TodoItem key={item.id} todo={item} />)
-
 	return (
-		<main>
-			{todos}
-		</main>
+		<div>
+			<Header />
+			<MainContent />
+			<Footer />
+		</div>
 	)
 }
 
