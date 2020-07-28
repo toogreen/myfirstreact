@@ -28,6 +28,11 @@ const jokesData = [
 		id: 6,
 		question: "Joke 6",
 		answer: "Answer 6"
+	},
+	{
+		id: 7,
+		question: "Joke 7",
+		answer: "Answer 7"
 	}
 ]
 

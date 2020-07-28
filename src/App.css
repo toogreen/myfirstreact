@@ -45,6 +45,10 @@ footer{
 }
 
 .joke-item{
+	background-color: lightgreen;
+	text-align: center;
+	margin: 0 auto;
+	max-width: 80%;
 	box-shadow: 3px 4px 4px #888888;
 	border: 1px solid;
 	margin-bottom: 20px;

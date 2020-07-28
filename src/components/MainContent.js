@@ -11,7 +11,7 @@ function MainContent(){
 	return (
 		<main>
 			 {jokeComponents}
-		 </main>
+		</main>
 	)
 }
 
