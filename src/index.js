@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDom from "react-dom";
-import App from "./todo/App";
+
+import App from "./components/state/App";
 
 ReactDom.render(<App />,document.getElementById("root"));
