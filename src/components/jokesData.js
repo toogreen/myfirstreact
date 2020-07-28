@@ -1,6 +1,7 @@
 const jokesData = [
 	{
 		id: 1,
+		question: "Question 1",
 		answer: "Answer 1"
 	},
 	{

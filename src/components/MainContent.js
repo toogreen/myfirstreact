@@ -1,7 +1,7 @@
 import React from "react"
 
 import Joke from "./Joke"
-import jokesData from "./jokesData"
+import jokesData from "./jokesData.js"
 
 function MainContent(){
 
