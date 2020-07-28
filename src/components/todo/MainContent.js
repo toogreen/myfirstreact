@@ -3,15 +3,26 @@ import React from "react";
 import TodoItem from "./TodoItem";
 import todosData from "./todosData";
 
-function MainContent(){
+class MainContent extends React.Component{
 
-	const todos = todosData.map(item => <TodoItem key={item.id} todo={item} />)
+	constructor() {
+		super()
+		this.state = {
+			todos: todosData
+		}
+	}
 
-	return (
-		<main>
-			{todos}
-		</main>
-	)
+	render(){
+
+		const todoItems = this.state.todos.map(item => <TodoItem key={item.id} todo={item} />)
+
+		return (
+			<main>
+				{todoItems}
+			</main>
+		)
+	}
+
 }
 
 export default MainContent 

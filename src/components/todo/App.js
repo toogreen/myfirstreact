@@ -1,9 +1,9 @@
 import React from "react";
 
-import Header from "../components/Header";
+import Header from "../Header";
 import MainContent from "./MainContent"
-import Footer from "../components/Footer"
-import "../App.css";
+import Footer from "../Footer"
+import "../../App.css";
 
 function App(){
 
