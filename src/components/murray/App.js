@@ -4,22 +4,38 @@ function clickButton() {
 	alert("you clicked me!");
 }
 
-
 function overFace() {
-	alert("you OVER FACED me!");
+	document.getElementById("billface").src = "https://www.fillmurray.com/100/100";
 }
 
-function App(){
+function outFace() {
+	document.getElementById("billface").src = "https://www.fillmurray.com/200/100";
+}
 
 
-	return (
-		<div>
-			<img id="billface" onMouseOver={overFace} src="https://www.fillmurray.com/200/100"/>
-			<br />
-			<br />
-			<button onClick={clickButton}>Click Me</button>
-		</div>
-	)
+
+class App extends React.Component {
+
+	constructor() {
+		super()
+		this.state = {
+			imgUrl: "https://www.fillmurray.com/200/100"
+		}		
+	}
+
+	render(){
+
+		return (
+
+			<div>
+				<img id="billface" onMouseOver={overFace} onMouseOut={outFace} src={this.state.imgUrl}/>
+				<br />
+				<br />
+				<button onClick={clickButton}>Click Me</button>
+			</div>
+		)		
+	}
+
 }
 
 export default App
