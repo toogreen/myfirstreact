@@ -5,8 +5,8 @@ function TodoItem(props){
 
 		return (
 				<div className="checkbox">
-				  <input type="checkbox" checked={props.todo.completed} onChange={()=> alert("change attempted")}/>
-				  <label>{props.todo.text}</label>
+				  <input type="checkbox" checked={props.item.completed} onChange={() => props.handleChange(props.item.id)}/>
+				  <label>{props.item.text}</label>
 				</div>
 		)		
 
