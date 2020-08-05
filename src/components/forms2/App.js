@@ -98,7 +98,7 @@ class App extends Component {
 				<br /><br /><br /><br />
 				<h1>{this.state.firstName} {this.state.lastName}</h1>
 				<h2>You are a {this.state.isFriendly ? "friendly" : "unfriendly"} {this.state.gender}</h2>
-				<h2>And {this.state.favColor} is your favorite color</h2>
+				<h2>And <span style={{color: this.state.favColor}}>{this.state.favColor}</span> is your favorite color</h2>
 				<p>
 					<strong>And this is the bullshit you wrote:</strong><br/><br/>
 					{this.state.someText}
