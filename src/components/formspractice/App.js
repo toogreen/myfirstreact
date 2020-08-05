@@ -136,8 +136,7 @@ class App extends Component {
 				<p>Dietary Restrictions: {(this.state.isVegan) || (this.state.isKosher) || (this.state.isLactoseFree) ? "Yes, see the following:" : "No"}</p>
 				<p>
 					{this.state.isVegan && "Vegan"}
-					{(this.state.isVegan && this.state.isKosher) && ", "}
-					{(this.state.isVegan && this.state.isLactoseFree) && ", "}
+					{(this.state.isVegan && this.state.isKosher) && ", " || (this.state.isVegan && this.state.isLactoseFree) && ", "}
 					{this.state.isKosher && "Kosher"} 
 					{(this.state.isKosher && this.state.isLactoseFree) && ", "}
 					{this.state.isLactoseFree && "Lactose Free"}
