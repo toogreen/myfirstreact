@@ -24,7 +24,7 @@ class App extends Component {
 	render() {
 		//const displayText = this.state.firstName
 		return(
-			<form>
+			<form !onSubmit={this.handleSubmit}>
 				<input 
 					value={this.state.firstName} 
 					name="firstName" 
@@ -103,6 +103,7 @@ class App extends Component {
 					<strong>And this is the bullshit you wrote:</strong><br/><br/>
 					{this.state.someText}
 				</p>
+				<button>Submit</button>
 			</form>
 		)
 	}
