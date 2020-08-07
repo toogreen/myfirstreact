@@ -50,7 +50,10 @@ class MemeGenerator extends Component {
 		return(
 			<main>
 				<form className="meme-form" onSubmit={this.handleSubmit}>
-				<input
+
+				<button>Change image</button>
+
+				<input 
 					type="text"
 					name="topText"
 					value={this.state.topText}
@@ -58,7 +61,7 @@ class MemeGenerator extends Component {
 					onChange={this.handleChange} 
 				/>
 
-				<br /> 
+				<br />
 				
 				<input 
 					type="text"
@@ -69,14 +72,11 @@ class MemeGenerator extends Component {
 				/>
 
 				<br />
-
-					<button>Generate!</button>
+					
 				</form>
 
-				<br />
-
-				<div className="meme">
-					<img src={this.state.randomImg} alt="" />
+				<div className="meme"> 
+					<img src={this.state.randomImg} alt="" onClick={this.handleSubmit} />
 					<h2 className="top">{this.state.topText}</h2>
 					<h2 className="bottom">{this.state.bottomText}</h2>
 				</div>

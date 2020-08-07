@@ -89,6 +89,12 @@ main{
 	bottom: 0px;
 }
 
+.meme-form {
+	width: 90%;
+	text-align: center;
+	margin: 0 auto;
+}
+
 .meme-form > button {
 	border: none;
 	font-family: 'Chathura', sans-serif;
@@ -96,6 +102,11 @@ main{
 	letter-spacing: 1.5px;
 	color: white;
 	background: #6441A5;
+	float: right;
+}
+
+.meme-form > input {
+	float: left;
 }
 
 .meme-form > input::-webkit-input-placeholder { /* Chrome/Opera/Safari */ 
