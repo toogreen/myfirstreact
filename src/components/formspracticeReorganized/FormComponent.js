@@ -113,10 +113,15 @@ function FormComponent(props) {
 			<p>Your location: {props.data.destination}</p>
 			<p>Dietary Restrictions: {(props.data.isVegan) || (props.data.isKosher) || (props.data.isLactoseFree) ? "Yes, see the following:" : "No"}</p>
 			<p>
+				// If person is Vegan, display "Vegan"
 				{props.data.isVegan && "Vegan"}
+				// If person is Vegan AND Kosher, add a comma OR if person is Vegan AND lactose Free, also add a comma
 				{(props.data.isVegan && props.data.isKosher) && ", " || (props.data.isVegan && props.data.isLactoseFree) && ", "}
+				// If person is Kosker, display "Kosher"
 				{props.data.isKosher && "Kosher"} 
+				// If person is Kosher AND Lactose free, also add a comma
 				{(props.data.isKosher && props.data.isLactoseFree) && ", "}
+				// If person is Lactose free, display "Lactose Free"
 				{props.data.isLactoseFree && "Lactose Free"}
 			</p>
 
