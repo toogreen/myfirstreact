@@ -6,6 +6,20 @@ body{
 	margin: 0;
 }
 
+header{
+
+}
+
+header img {
+	max-width: 100px;
+	margin-right: 50px;
+}
+
+header p {
+	font-size: 64px;
+	justify-content: left;
+}
+
 ul{
 	list-style-image: url('./green-arrow.svg');
 	width: 40%
@@ -13,7 +27,7 @@ ul{
 
 .navbar {
 	background-color: #333;
-	height: 100px;
+	height: 200px;
 	color: white;
 	margin-bottom: 15px;
 	text-align: center;
