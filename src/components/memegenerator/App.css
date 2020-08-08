@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chathura:wght@700&display=swap');
 
+
 body{
 	font-family: 'Chathura', sans-serif;
 	font-size: 20px;
@@ -133,12 +134,19 @@ main{
 	text-align: cen
 }
 
-
-
 footer{
 	text-align: center;
 	background-color: #000000;
 	color: #FFFFFF;
 	margin-bottom: 0px;
 	height: 100px;
+}
+
+
+
+@media (min-width: 900px) {
+	.meme > h2 {
+	  	font-size: 2em;
+	}
+
 }
