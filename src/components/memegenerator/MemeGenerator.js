@@ -1,4 +1,5 @@
 import React, {Component} from "react"
+import Ad from "../Ad"
 
 class MemeGenerator extends Component {
 	constructor() {
@@ -80,6 +81,8 @@ class MemeGenerator extends Component {
 					<h2 className="top">{this.state.topText}</h2>
 					<h2 className="bottom">{this.state.bottomText}</h2>
 				</div>
+
+				<Ad />
 
 			</main>
 		)
