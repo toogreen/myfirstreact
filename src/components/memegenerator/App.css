@@ -135,10 +135,15 @@ main{
 }
 
 footer{
+	/* position: fixed; */
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
 	text-align: center;
 	background-color: #000000;
 	color: #FFFFFF;
 	margin-bottom: 0px;
+	padding-top: 10px;
 	height: 100px;
 }
 
