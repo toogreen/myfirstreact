@@ -145,6 +145,7 @@ footer{
 	margin-bottom: 0px;
 	padding-top: 10px;
 	height: 100px;
+	z-index: -100;
 }
 
 .ad-containter, .ad{
@@ -154,9 +155,31 @@ footer{
 	height:50px; 
 	border:0px; 
 	padding:0; 
-	overflow:hidden
+	overflow:hidden;
+	z-index: -100;
 }
 
+.hidden{
+	position: absolute;
+	top: 2%;
+	left: 2%;
+	background-color: white;
+	padding: 20px;
+	display: none;
+	z-index: 1000;
+	height: auto;
+	box-shadow: 10px 14px 14px #888888;
+}
+
+.close{
+	position: relative;
+	float: right;
+	top: 0px;
+	right: 0px;
+	cursor: pointer;
+	font-size: 60px;
+	font-weight: bold;
+}
 
 
 @media (min-width: 900px) {

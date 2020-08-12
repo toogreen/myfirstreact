@@ -1,5 +1,7 @@
 import React, {Component} from "react"
 import Ad from "../Ad"
+import domtoimage from "dom-to-image"
+import $ from "jquery"
 
 class MemeGenerator extends Component {
 	constructor() {
@@ -46,6 +48,33 @@ class MemeGenerator extends Component {
 		this.setState({ randomImg: randMemeImg})
 	}
 
+	handleCopy(){
+
+		const render = node =>
+		  domtoimage.toPng(node)
+		  .then(dataUrl => {
+		    console.log(performance.now() - pf)
+		    const img = new Image();
+		    img.src = dataUrl;
+		    $('.hidden').show();
+		    $('.imgZone').replaceWith(img);
+		  })
+		  .catch(error =>
+		    console.error('oops, something went wrong!', error)
+		  );
+
+		const foo = document.getElementById('meme');
+
+		var pf = performance.now();
+		render(foo);
+
+		//alert("image copied to clipboard! Now imply use PASTE in any other app");
+	}
+
+	closeModal() {
+		$('.hidden').hide();
+	}
+
 	render() {
 		//const loadText = this.state.loading ? "Loading..." : this.state.character.name
 		return(
@@ -76,10 +105,18 @@ class MemeGenerator extends Component {
 					
 				</form>
 
-				<div className="meme"> 
+				<div id="meme" className="meme"> 
 					<img src={this.state.randomImg} alt="" onClick={this.handleSubmit} />
 					<h2 className="top">{this.state.topText}</h2>
 					<h2 className="bottom">{this.state.bottomText}</h2>
+				</div>
+
+				<button onClick={this.handleCopy}>Generate an image you can copy to clipboard</button>
+
+				<div className="hidden">
+					<div className="close" onClick={this.closeModal}>X</div>
+					<h2>Copy the image below in order to paste it in any other app:</h2>
+					<div className="imgZone"></div>
 				</div>
 
 				<Ad />
