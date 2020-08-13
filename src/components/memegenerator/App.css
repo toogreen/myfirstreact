@@ -175,6 +175,7 @@ footer{
 }
 
 .close{
+	display: none;
 	position: relative;
 	float: right;
 	top: 0px;
