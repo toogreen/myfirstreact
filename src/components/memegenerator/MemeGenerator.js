@@ -1,7 +1,7 @@
 import React, {Component} from "react"
 import Ad from "../Ad"
-import domtoimage from "dom-to-image"
 import $ from "jquery"
+import domtoimage from "dom-to-image"
 
 class MemeGenerator extends Component {
 	constructor() {
@@ -10,10 +10,12 @@ class MemeGenerator extends Component {
 			topText: "",
 			bottomTet: "",
 			randomImg: "http://i.imgflip.com/1bij.jpg",
-			allMemeImgs: []
+			allMemeImgs: [],
+			count: 0
 		}
 		this.handleChange = this.handleChange.bind(this)
 		this.handleSubmit = this.handleSubmit.bind(this)
+		this.handleCopy = this.handleCopy.bind(this)
 	}
 
 	componentDidMount() {
@@ -36,6 +38,7 @@ class MemeGenerator extends Component {
 	}
 
 	handleSubmit(event){
+
 		event.preventDefault()
 
 		//get a a random number
@@ -50,25 +53,39 @@ class MemeGenerator extends Component {
 
 	handleCopy(){
 
+		// Copy the content of the "meme" DIV and make it an image
 		const render = node =>
 		  domtoimage.toPng(node)
 		  .then(dataUrl => {
 		    console.log(performance.now() - pf)
 		    const img = new Image();
 		    img.src = dataUrl;
+
+		    $('.imgZone').append("<h2>Your generated image # " + this.state.count+ "</h2>")
+		    $('.imgZone').append(img)
 		    $('.hidden').show();
-		    $('.imgZone').replaceWith(img);
+
 		  })
 		  .catch(error =>
 		    console.error('oops, something went wrong!', error)
-		  );
+		  ),
 
-		const foo = document.getElementById('meme');
+		foo = document.getElementById('meme');
 
 		var pf = performance.now();
 		render(foo);
 
-		//alert("image copied to clipboard! Now imply use PASTE in any other app");
+		// Increment the value of count
+		this.setState(prevState => {
+			return {
+				count: prevState.count + 1
+			}
+		})
+
+		const alertString = "Your image #" + (this.state.count + 1) + " was generated! Scroll down to see it below"
+
+		alert(alertString)
+ 
 	}
 
 	closeModal() {
@@ -76,7 +93,7 @@ class MemeGenerator extends Component {
 	}
 
 	render() {
-		//const loadText = this.state.loading ? "Loading..." : this.state.character.name
+
 		return(
 			<main>
 				<form className="meme-form" onSubmit={this.handleSubmit}>
@@ -111,13 +128,20 @@ class MemeGenerator extends Component {
 					<h2 className="bottom">{this.state.bottomText}</h2>
 				</div>
 
-				<button onClick={this.handleCopy}>Generate an image you can copy to clipboard</button>
+				<button id="buttonCopy" onClick={this.handleCopy}>Generate an Image to copy it elsewhere</button>
+
 
 				<div className="hidden">
 					<div className="close" onClick={this.closeModal}>X</div>
-					<h2>Copy the image below in order to paste it in any other app:</h2>
+					<h2>Copy the image{this.state.count > 1 && "s"} below in other apps:</h2>
 					<div className="imgZone"></div>
+
 				</div>
+
+				
+
+				<br />
+				<br />
 
 				<Ad />
 
