@@ -82,9 +82,12 @@ class MemeGenerator extends Component {
 			}
 		})
 
-		const alertString = "Your image #" + (this.state.count + 1) + " was generated! Scroll down to see it below"
+		// Disabled the below as I don't like popup alerts
+		//const alertString = "Your image #" + (this.state.count + 1) + " was generated! Scroll down to see it below"
+		//alert(alertString)
 
-		alert(alertString)
+		// scroll down to new image
+		window.scrollTo(0,document.body.scrollHeight);
  
 	}
 
@@ -133,7 +136,7 @@ class MemeGenerator extends Component {
 
 				<div className="hidden">
 					<div className="close" onClick={this.closeModal}>X</div>
-					<h2>Copy the image{this.state.count > 1 && "s"} below in other apps:</h2>
+					<h1>Use the image{this.state.count > 1 && "s"} below to copy it in other apps:</h1>
 					<div className="imgZone"></div>
 
 				</div>
